@@ -1,0 +1,28 @@
+Deployment General:
+
+	Hay 3 tipos de nodos de procesamiento
+		A) Servidor
+		B) Generador de Numeros Aleatorio
+		C) Clientes x N
+
+	Los Nodos se comunican por medio de TCP
+
+	Comportamiento:
+		Los N nodos clientes le preguntan al Servidor si esta ocupado
+		El Servidor les pide X simulaciones al un cliente
+		Un nodo cliente le pide X simulaciones al nodo Generador
+		El Servidor le envia la semilla al Nodo Generador
+		
+	Para esta vision general, solo se pone el composite que esta en el XML de cada proyecto
+	
+
+Deployments Particular (por si las moscas)
+
+	Hacer un deployment para cada proyecto (generador, servidor, cliente)
+
+	Basarse en las clases para representar los componentes
+	y los metodos para representar los puertos
+
+	Comportamiento:
+		tener en cuenta que cuando una clase (componente) llama metodos de otra
+		esto se refleja en el deployment... mirar los metodos para esto

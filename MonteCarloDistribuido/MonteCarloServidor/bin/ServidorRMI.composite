@@ -1,0 +1,20 @@
+<composite xmlns="http://www.osoa.org/xmlns/sca/1.0"
+  xmlns:frascati="http://frascati.ow2.org/xmlns/sca/1.1"
+  targetNamespace="http://frascati.ow2.org/helloworld-rmi"
+  name="ServidorRMI">
+
+  <service name="run" promote="ReceptorDePeticiones/run">
+    <interface.java interface="java.lang.Runnable" />
+  </service>
+
+  <component name="ReceptorDePeticiones">
+
+    <service name="run">
+      <interface.java interface="java.lang.Runnable" />
+    </service>
+
+    <implementation.java class="co.edu.icesi.mundo.ReceptorDePeticiones" />
+
+  </component>
+
+</composite>
